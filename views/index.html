@@ -1,0 +1,68 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Welcome to Bet Notifier!</title>
+    <meta name="description" content="Bet Notifier">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Notificador cuotas deportivas</h1>
+    </header>
+
+    <main>
+      <form action="#" onsubmit="return getAllMatches(this);">
+        Fecha: <input type="date" id="dateEvents">
+        Cuota pre-partido: <input type="text" id="oddPre" value="1.10">
+        Cuota LIVE: <input type="text" id="oddLive" value="1.36">
+        <input type="submit" value="Submit">
+      </form> 
+
+      <div id="info">
+      </div>
+      <div id="info_matches">
+        <table class="table table-hover" id="table_info_matches">
+          <thead>
+            <tr>
+              <td><b>Evento</b></td>
+              <td><b>Fecha</b></td>
+              <td><b>Id</b></td>
+              <td><b>Resultado actual</b></td>
+              <td><b>Pre-Partido</b></td>
+              <td><b>En directo</b></td>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
